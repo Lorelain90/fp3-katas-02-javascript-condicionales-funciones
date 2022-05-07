@@ -10,7 +10,7 @@ describe("Condicionales en JavaScript", () => {
         }
 
         // Edita el .toEqual() (los "???") para que pase el test
-        expect(result).toEqual(???);
+        expect(result).toEqual("Lara tiene un nombre corto");
     })
 
 
@@ -26,7 +26,7 @@ describe("Condicionales en JavaScript", () => {
         }
 
         // Edita el .toEqual() para que pase el test
-        expect(result).toEqual(???);
+        expect(result).toEqual("Olga es mayor de edad.");
     })
 
 
@@ -35,7 +35,7 @@ describe("Condicionales en JavaScript", () => {
         let b = "pepperoni";
         let number = 14;
         let result;
-
+        // modulable per 7 es divisible per 7. Result es b.
         if (number % 7 === 0) {
             result = `Pizza con ${b}`
         } else {
@@ -43,7 +43,7 @@ describe("Condicionales en JavaScript", () => {
         }
 
         // Edita el .toEqual() para que pase el test
-        expect(result).toEqual(???);
+        expect(result).toEqual("Pizza con pepperoni");
     })
 })
 
@@ -51,10 +51,15 @@ describe("Condicionales en JavaScript", () => {
 describe("Escribe tus propios tests", () => {
     test("Si la persona es de Reino Unido (UK), le saludamos en inglés, y si no, le saludamos en castellano", () => {
         let country = "UK";
-        let greeting;
+        let greeting = "¡Hola!";
 
         // Escribe aquí tu condicional contemplando las 2 casuísticas. En este caso, el saludo debe ser "¡Hola!" o bien "Hello!".
-        
+        if (country === "UK") {
+            greeting = `Hello!`
+        } else {
+            greeting = `¡Hola!`
+        }
+
 
         expect(greeting).toBe("Hello!");
     })
@@ -65,7 +70,14 @@ describe("Escribe tus propios tests", () => {
         let saludo;
         
         // Escribe aquí tu condicional contemplando las 3 casuísticas
-    
+        if(hour < 12 && hour < 6){
+            saludo = "Buenos días";
+        } else if (hour < 20  && hour > 6){
+            saludo = "Buenas tardes";
+        } else if (hour < 6  && hour > 12){
+            saludo = "Buenas noches";
+        }
+
 
         expect(saludo).toEqual("Buenas tardes");
     })
